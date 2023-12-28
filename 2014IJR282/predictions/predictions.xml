@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PredictionRegistry xmlns="http://www.qsardb.org/QDB">
+    <Prediction>
+        <Id>Tb_train</Id>
+        <Name>Training set</Name>
+        <Labels></Labels>
+        <Cargos>values</Cargos>
+        <ModelId>Eq12</ModelId>
+        <Type>training</Type>
+    </Prediction>
+    <Prediction>
+        <Id>Tb_test</Id>
+        <Name>Validation set</Name>
+        <Labels></Labels>
+        <Cargos>values</Cargos>
+        <ModelId>Eq12</ModelId>
+        <Type>validation</Type>
+    </Prediction>
+    <Prediction>
+        <Id>Hvb_train</Id>
+        <Name>Training set</Name>
+        <Labels></Labels>
+        <Cargos>values</Cargos>
+        <ModelId>Eq13</ModelId>
+        <Type>training</Type>
+    </Prediction>
+    <Prediction>
+        <Id>Hvb_test</Id>
+        <Name>Validation set</Name>
+        <Labels></Labels>
+        <Cargos>values</Cargos>
+        <ModelId>Eq13</ModelId>
+        <Type>validation</Type>
+    </Prediction>
+</PredictionRegistry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PMML xmlns="http://www.dmg.org/PMML-4_1" version="4.1">
+    <DataDictionary>
+        <DataField name="properties/Hvb" displayName="Enthalphy of vaporization at normal boiling point" optype="continuous" dataType="double"/>
+        <DataField name="descriptors/Hy" displayName="Hydrophilic factor" optype="continuous" dataType="double"/>
+        <DataField name="descriptors/P1s" displayName="1st component shape directional WHIM index/weighted by atomic electrotopological states" optype="continuous" dataType="double"/>
+        <DataField name="descriptors/ATS1m" displayName="Broto-Moreau autocorrelation of a topological structuree lag 1/ weighted by atomic masses" optype="continuous" dataType="double"/>
+        <DataField name="descriptors/ALOGPS_logP" displayName="Octanol/water partition coefﬁcient" optype="continuous" dataType="double"/>
+        <DataField name="descriptors/ZM1V" displayName="First Zagreb index by valence vertex degrees" optype="continuous" dataType="double"/>
+        <DataField name="descriptors/Har" displayName="Harary H index" optype="continuous" dataType="double"/>
+    </DataDictionary>
+    <RegressionModel functionName="regression" algorithmName="ERM-MLR" targetFieldName="properties/Hvb">
+        <MiningSchema>
+            <MiningField name="properties/Hvb" usageType="predicted"/>
+            <MiningField name="descriptors/Hy" usageType="active"/>
+            <MiningField name="descriptors/P1s" usageType="active"/>
+            <MiningField name="descriptors/ATS1m" usageType="active"/>
+            <MiningField name="descriptors/ALOGPS_logP" usageType="active"/>
+            <MiningField name="descriptors/ZM1V" usageType="active"/>
+            <MiningField name="descriptors/Har" usageType="active"/>
+        </MiningSchema>
+        <RegressionTable intercept="604.6234828">
+            <NumericPredictor name="descriptors/Hy" coefficient="50.5406652"/>
+            <NumericPredictor name="descriptors/P1s" coefficient="108.0600573"/>
+            <NumericPredictor name="descriptors/ATS1m" coefficient="-181.3450232"/>
+            <NumericPredictor name="descriptors/ALOGPS_logP" coefficient="-38.1181892"/>
+            <NumericPredictor name="descriptors/ZM1V" coefficient="-0.7738801"/>
+            <NumericPredictor name="descriptors/Har" coefficient="23.1419749"/>
+        </RegressionTable>
+    </RegressionModel>
+</PMML>

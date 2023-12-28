@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ModelRegistry xmlns="http://www.qsardb.org/QDB">
+    <Model>
+        <Id>Eq12</Id>
+        <Name>Model for normal boiling point</Name>
+        <Description>Enhanced Replacement Method (ERM) was used to select descriptors</Description>
+        <Labels></Labels>
+        <Cargos>pmml</Cargos>
+        <PropertyId>Tb</PropertyId>
+    </Model>
+    <Model>
+        <Id>Eq13</Id>
+        <Name>Model for enthalphy of vaporization</Name>
+        <Description>Enhanced Replacement Method (ERM) was used to select descriptors</Description>
+        <Labels></Labels>
+        <Cargos>pmml</Cargos>
+        <PropertyId>Hvb</PropertyId>
+    </Model>
+</ModelRegistry>

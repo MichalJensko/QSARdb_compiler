@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PMML xmlns="http://www.dmg.org/PMML-4_1" version="4.1">
+    <DataDictionary>
+        <DataField name="properties/Tb" displayName="Normal boiling point" optype="continuous" dataType="double"/>
+        <DataField name="descriptors/R1e+" displayName="R maximal autocorrelation of lag 1/weighted by atomic Sanderson electronegativities" optype="continuous" dataType="double"/>
+        <DataField name="descriptors/MATS1m" displayName="Moran autocorrelation - lag 1/ weighted by atomic masses" optype="continuous" dataType="double"/>
+        <DataField name="descriptors/X1sol" displayName="Solvation connectivity index chi-1" optype="continuous" dataType="double"/>
+        <DataField name="descriptors/Me" displayName="Mean atomic Sanderson electronegativity (scaled on Carbon atom)" optype="continuous" dataType="double"/>
+        <DataField name="descriptors/ESpm02d" displayName="Spectral moment 02 from edge adj. matrix weighted by dipole moments" optype="continuous" dataType="double"/>
+    </DataDictionary>
+    <RegressionModel functionName="regression" algorithmName="ERM-MLR" targetFieldName="properties/Tb">
+        <MiningSchema>
+            <MiningField name="properties/Tb" usageType="predicted"/>
+            <MiningField name="descriptors/R1e+" usageType="active"/>
+            <MiningField name="descriptors/MATS1m" usageType="active"/>
+            <MiningField name="descriptors/X1sol" usageType="active"/>
+            <MiningField name="descriptors/Me" usageType="active"/>
+            <MiningField name="descriptors/ESpm02d" usageType="active"/>
+        </MiningSchema>
+        <RegressionTable intercept="443.578274">
+            <NumericPredictor name="descriptors/R1e+" coefficient="117.3374122"/>
+            <NumericPredictor name="descriptors/MATS1m" coefficient="-38.1785837"/>
+            <NumericPredictor name="descriptors/X1sol" coefficient="52.8775852"/>
+            <NumericPredictor name="descriptors/Me" coefficient="-309.7356053"/>
+            <NumericPredictor name="descriptors/ESpm02d" coefficient="24.3902616"/>
+        </RegressionTable>
+    </RegressionModel>
+</PMML>
